@@ -77,6 +77,7 @@ h2{
 .field2{
     margin-left: 20%;
     border:none;
+    color:#EDEDED;
     border-bottom: #B08EFC 1px solid;
     background-color: #4E4E4E;
     width: 50%;
@@ -131,6 +132,9 @@ td {
   
     border-collapse: collapse;
     width: 100%;
+  }
+  input{
+    outline: none;
   }
 textarea {	
     -webkit-box-sizing: border-box;
