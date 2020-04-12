@@ -101,7 +101,7 @@ exports.submitItem = async (event, context) => {
         name: input_obj.name,
         email: input_obj.email,
         date: date,
-        Approved: false,
+        Approved: "F",
         Where: input_obj.where,
         What: input_obj.what,
         Description: input_obj.Description,
@@ -148,5 +148,13 @@ Item 2 -> Verified Item ->
 
 
 exports.getVerifiedItems = async (event, context) => {
+    
+    response = {
+        'statusCode': 200,
+        'body': JSON.stringify({
+            message: 'hello world',
+            // location: ret.data.trim()
+        }),
+    }
 
 }
