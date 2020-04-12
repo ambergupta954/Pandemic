@@ -1,0 +1,53 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'pandemic-connector
+
+  Sample SAM Template for pandemic-connector
+
+  '
+Globals:
+  Function:
+    Timeout: 3
+Resources:
+  PhConnectorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: PhConnectorFunction
+      Handler: app.lambdaHandler
+      Runtime: nodejs12.x
+      Events:
+        PhConnector:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get
+  PhConnectorSubmitFormFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: PhConnectorSubmitFormFunction
+      Handler: app.submitItem
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::618738189791:role/testCRUD
+      Events:
+        PhConnector:
+          Type: Api
+          Properties:
+            Path: /form/submit
+            Method: post
+Outputs:
+  PhConnectorApi:
+    Description: API Gateway endpoint URL for Prod stage for Hello World function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/
+  PhConnectorFunction:
+    Description: Hello World Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - PhConnectorFunction
+      - Arn
+  PhConnectorFunctionIamRole:
+    Description: Implicit IAM Role created for Hello World function
+    Value:
+      Fn::GetAtt:
+      - PhConnectorFunctionRole
+      - Arn
