@@ -8,7 +8,7 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -31,12 +31,22 @@
 
 </div>
 <div class="form">
-<form> 
+        <option value="cnc">CNC</option>
+        <option value="ma">Manufaturing Assistance</option>
+        <option value="hs">Hand Sanitizers</option>
+        <option value="medi">Medicines</option>
+      </select>
+   <br>
     <br>
-    <label class="text" for="contribute">What can you contribute?</label> <br>
-    <textarea  class="field" rows="3" cols="60" name="contribute"
-                        id="contribute">
-    </textarea> <br>
+    <label class="text" for="quantity">What is the quantity?</label> <br><br>
+    <select class="spinner" id="cars">
+        <option value="NA">Not Applicable</option>
+        <option value="zero-fif">0-50</option>
+        <option value="fif-hun">50-100</option>
+        <option value="hun">100+</option>
+       
+      </select>
+    <br>
     <br>
     <label class="text" for="contribute">description of your item/service</label> <br>
     <textarea class="field"rows="3" cols="60" name="contribute"
@@ -45,7 +55,6 @@
     <label class="text" for="contribute">Where can you contribute?</label> <br>
     <textarea class="field" rows="3" cols="60" name="contribute"
     id="contribute"></textarea>          <br>
-    <br>
     <div class="contact-head">
     <h2>contact info:</h2>  
     </div>    
@@ -54,7 +63,7 @@
     <input class="field2" type="number" id="cno" name="cno"><br>  
     </div><br>
     <div class="contact">
-  <label class="text" for="EMAIL ID">e-mail</label>
+  <label class="text" for="EMAILID">e-mail</label>
         <input  class="field2" type="text" name="Email id" id="Email id"> <br>
         </div><br>
         <div class="contact">
@@ -69,5 +78,6 @@
 
 </form> 
 </div>
+<script type="text/javascript" src="pandemic.js"></script>
 </body>
 </html>

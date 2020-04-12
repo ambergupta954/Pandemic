@@ -28,6 +28,12 @@ h2{
 .country{
     color: #EDEDED;
 }
+.spinner{
+    background-color: #B08EFC;
+    color: #EDEDED;
+    height: 30px;
+    font-size: 14px;
+}
 .verified{
     display: flex;
     justify-content: center;
@@ -71,6 +77,7 @@ h2{
 .field2{
     margin-left: 20%;
     border:none;
+    color:#EDEDED;
     border-bottom: #B08EFC 1px solid;
     background-color: #4E4E4E;
     width: 50%;
@@ -125,6 +132,9 @@ td {
   
     border-collapse: collapse;
     width: 100%;
+  }
+  input{
+    outline: none;
   }
 textarea {	
     -webkit-box-sizing: border-box;
